@@ -9,6 +9,7 @@ public class Main {
     static int num;
     static OutPut symbol;
     static boolean flag = true;
+    static boolean EOF = false;
 
     static String filePath;
     static BufferedReader br;
@@ -21,6 +22,7 @@ public class Main {
             c = (char) a;
         else{
             flag = false;
+            EOF = true;
             c = '!';
         }
     }
@@ -157,7 +159,8 @@ public class Main {
                 (new FileInputStream(filePath),"UTF-8"));
         while(flag){
             getsym();
-            if(symbol.equals(OutPut.IDSY))
+            if(EOF) break;
+            else if(symbol.equals(OutPut.IDSY))
                 System.out.println("Ident(" + token + ")");
             else if(symbol.equals(OutPut.INTSY))
                 System.out.println("Int(" + num + ")");
