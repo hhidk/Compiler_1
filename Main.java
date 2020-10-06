@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
@@ -22,7 +21,7 @@ public class Main {
             c = (char) a;
         else{
             flag = false;
-            c = ' ';
+            c = '!';
         }
     }
 
@@ -97,10 +96,6 @@ public class Main {
 
     static int transNum() throws Exception{
         return Integer.parseInt(token);
-    }
-
-    static void error(){
-        System.exit(0);
     }
 
     static int getsym() throws Exception{
