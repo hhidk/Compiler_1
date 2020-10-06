@@ -149,8 +149,10 @@ public class Main {
             symbol = OutPut.LPARSY;
         else if(isRPar())
             symbol = OutPut.RPARSY;
-        else
-            error();
+        else{
+            symbol = OutPut.UNKNOWN;
+            flag = false;
+        }
         return 0;
     }
 

@@ -13,7 +13,8 @@ public enum  OutPut {
     COMMASY(12,"Comma"),
     LPARSY(13,"LParenthesis"),
     RPARSY(14,"RParenthesis"),
-    ASSIGNSY(15,"Assign")
+    ASSIGNSY(15,"Assign"),
+    UNKNOWN(16,"Unknown")
     ;
 
     int type;
